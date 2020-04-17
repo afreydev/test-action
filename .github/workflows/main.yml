@@ -45,11 +45,11 @@ jobs:
     - name: Compile libzim
       run: |
         cd libzim-C++ && git checkout 6.0.2
-        meson . build
-        ninja -C build install
+        sudo meson . build
+        sudo ninja -C build install
         cd ..
         rm -rf libzim-C++
-        ldconfig
+        sudo ldconfig
         export LD_LIBRARY_PATH="/usr/local/lib/x86_64-linux-gnu/""
     - name: Install Python development dependencies
       run: |
