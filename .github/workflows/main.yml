@@ -19,10 +19,10 @@ jobs:
         sudo rm -rf /var/lib/apt/lists/*
     - name: Set Locale and Language
       run: |
-        sudo export LANG="en_US.UTF-8"
-        sudo export LANGUAGE="en_US:en"
-        sudo export LC_ALL="en_US.UTF-8"
-        sudo export PYTHONIOENCODING="UTF-8"
+        export LANG="en_US.UTF-8"
+        export LANGUAGE="en_US:en"
+        export LC_ALL="en_US.UTF-8"
+        export PYTHONIOENCODING="UTF-8"
         sudo locale-gen en_US.UTF-8
     - name: Install library compilation dependencies
       run: |
